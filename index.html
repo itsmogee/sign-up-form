@@ -40,28 +40,55 @@
           <h2>Let's do this!</h2>
         </div>
         <div class="Forms">
-          <form action="#" method="post">
+          <form id="myForm" action="#" method="get">
             <div class="left-form">
               <label for="firstName">First Name </label>
-              <input type="text" id="firstName" />
+              <input
+                type="text"
+                id="firstName"
+                placeholder="i.e. Lucy"
+                required
+                minlength="2"
+                maxlength="15"
+              />
               <label for="email">Email </label>
-              <input type="text" id="email" />
+              <input
+                type="email"
+                id="email"
+                placeholder="example@example.com"
+                required
+              />
               <label for="password">Password </label>
-              <input type="text" id="password" />
+              <input type="text" id="password" required minlength="8" />
             </div>
             <div class="right-form">
               <label for="lastName">Last Name </label>
-              <input type="text" id="lastName" />
+              <input
+                type="text"
+                id="lastName"
+                placeholder="i.e. Graham"
+                minlength="2"
+                maxlength="15"
+                required
+              />
               <label for="phone_number">Phone Number </label>
-              <input type="text" id="phone_number" />
+              <input
+                type="text"
+                id="phone_number"
+                pattern="(\d{10}?)"
+                title="Please enter a valid phone number, example: 0123456789"
+                placeholder="0123456789"
+                required
+                maxlength="10"
+              />
               <label for="confirm_password">Confirm Password </label>
-              <input type="text" id="confirm_password" />
+              <input type="text" id="confirm_password" required />
             </div>
           </form>
         </div>
       </div>
       <div class="buttons">
-        <button>Create Account</button>
+        <button type="submit" form="myForm">Create Account</button>
         <p>Already have an account ? <a href="#">Log in</a></p>
       </div>
     </div>
